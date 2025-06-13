@@ -16,11 +16,11 @@ jobs:
       - name: instalar dependencias
         run: dotnet restore
       - name: compilar
-        run: notnet build --no-restore
+        run: dotnet build --no-restore
   crear-pdf:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@3
+      - uses: actions/checkout@v4.2.2
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
           input_dir: docs
